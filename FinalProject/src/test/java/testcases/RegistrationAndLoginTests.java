@@ -3,10 +3,13 @@ package testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import constants.GlobalConstants;
+import framework.MercuryFlightsPage;
 import framework.MercuryMainPage;
 import framework.MercuryRegistrationPage;
 
@@ -57,14 +60,20 @@ public class RegistrationAndLoginTests {
 		
 		MercuryMainPage mercuryMainPage = new MercuryMainPage(driver);
 		
-		mercuryMainPage.enterPassword("swtest");
+		mercuryMainPage.enterPassword("swtester");
 		
 		mercuryMainPage.enterUserName("MercuryUserAlison");
+
+		mercuryMainPage.clickLoginLink();
+		
+		MercuryFlightsPage mercuryFlightsPage = new MercuryFlightsPage(driver);
+		
+		assert mercuryFlightsPage.isMercuryFlightsPage() : "The Mercury Flights page is not displayed.";
 		
 	}
 
-	@BeforeClass
-	public void beforeClass() {	
+	@BeforeMethod
+	public void beforeMethod() {	
 		
 		String chromeWebDriverPath = GlobalConstants.chromeWebDriverPath;
 		
@@ -82,8 +91,8 @@ public class RegistrationAndLoginTests {
 		
 	}		
 
-	@AfterClass
-	public void afterTest() {
+	@AfterMethod
+	public void afterMethod() {
 		driver.quit();			
 	}		
 }

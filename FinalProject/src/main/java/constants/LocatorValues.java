@@ -39,7 +39,7 @@ public class LocatorValues {
 
 	public static By MercuryMainPage_registerLink = By.linkText("REGISTER");
 	
-	public static By MercuryLgoinPage_loginLink = By.linkText("Log In");
+	public static By MercuryLgoinPage_loginLink = By.name("login");
 	
 	public static By MercuryMainPage_userName = By.name("userName");
 	
@@ -48,6 +48,32 @@ public class LocatorValues {
 	//Mercury FLights page.
 	
 	public static By MercuryFlightsPage_FlightsMast = By.cssSelector("img[src='/images/masts/mast_flightfinder.gif']");
+	
+	public static By MercuryFlightsPage_numberOfPassengers = By.name("passCount");
+
+	public static By MercuryFlightsPage_departingFrom = By.name("fromPort");
+	
+	public static By MercuryFlightsPage_fromMonth = By.name("fromMonth");
+	
+	public static By MercuryFlightsPage_fromDay= By.name("fromDay");
+
+	public static By MercuryFlightsPage_arrivingIn = By.name("toPort");
+	
+	public static By MercuryFlightsPage_toMonth = By.name("toMonth");
+	
+	public static By MercuryFlightsPage_toDay= By.name("toDay");
+		
+	public static By MercuryFlightsPage_serviceClass = By.cssSelector("input[name='servClass']");
+	
+	public static By MercuryFlightsPage_selectAirline = By.name("airline");
+	
+	public static By MercuryFlightPage_continueButton = By.name("findFlights");
+	
+	//Mercury Select Flights Page
+	
+	//MercurySelectFlightPage_SelectFlightMast)
+
+	public static By MercurySelectFlightPage_SelectFlightPageMast = By.cssSelector("img[src='/images/masts/mast_selectflight.gif']");
 	
 	///Mercury Log In Page
 

@@ -25,7 +25,7 @@ public class MercuryMainPage {
 	 * 
 	 * Is the Edureka Main page displayed?
 	 */
-	private boolean isMercuryMainPage() {
+	public boolean isMercuryMainPage() {
 		
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 30);
 
@@ -74,7 +74,7 @@ public class MercuryMainPage {
 	 * @return 
 	 * 
 	 */
-	public MercuryLoginPage clickLoginLink(){
+	public MercuryFlightsPage clickLoginLink(){
 		
 		WebDriverWait webDriverWait = new WebDriverWait(driver, 30);
 		
@@ -82,7 +82,7 @@ public class MercuryMainPage {
 		
 		loginLink.click();
 		
-		return new MercuryLoginPage(driver);
+		return new MercuryFlightsPage(driver);
 	}
 
 	public MercuryRegistrationPage clickRegisterLink() {
