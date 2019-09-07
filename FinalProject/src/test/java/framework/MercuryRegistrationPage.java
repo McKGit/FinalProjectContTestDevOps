@@ -2,14 +2,14 @@ package framework;
 
 import org.openqa.selenium.WebDriver;
 
-public class MercuryLoginPage {
+public class MercuryRegistrationPage {
 	
 	WebDriver driver;
-	
-	public MercuryLoginPage(WebDriver driver){
-		
+
+	public MercuryRegistrationPage(WebDriver driver) {
+
 		this.driver = driver;
-				
+		
 	}
 
 }
