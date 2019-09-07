@@ -20,9 +20,18 @@ public class FlightBookingTests {
 	@Test
 	public void testBookFlight(){
 		
-		//ENTER NUMBER OF PASSENGERS
+		//ENSURE THAT THE MERCURY FLIGHTS PAGE IS DISPLAYED
 		
 		MercuryFlightsPage mercuryFlightsPage = new MercuryFlightsPage(driver);
+
+		if(!mercuryFlightsPage.isMercuryFlightsPage()){
+			
+			throw new IllegalStateException("The Mercury Flights page is not displayed.");
+			
+		}
+		
+		//ENTER NUMBER OF PASSENGERS
+		
 		
 		int numberOfPassengers = 2;
 		

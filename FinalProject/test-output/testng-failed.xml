@@ -3,14 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.FlightBookingTests">
+      <class name="testcases.MenuLinkTests">
         <methods>
+          <include name="beforeClass"/>
+          <include name="testFlightsLink"/>
+          <include name="testCruisesLink"/>
+          <include name="testHotelsLink"/>
           <include name="logonUser"/>
-          <include name="afterMethod"/>
-          <include name="getURL"/>
-          <include name="testBookFlight"/>
+          <include name="afterTest"/>
+          <include name="testCarRentalsLink"/>
         </methods>
-      </class> <!-- testcases.FlightBookingTests -->
+      </class> <!-- testcases.MenuLinkTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

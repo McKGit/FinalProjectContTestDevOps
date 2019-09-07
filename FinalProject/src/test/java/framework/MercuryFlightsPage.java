@@ -140,4 +140,16 @@ public class MercuryFlightsPage {
 		
 
 	}
+
+	public MercuryCruiseSpecialsPage clickCruisesLink() {
+		
+		WebDriverWait webDriverWait = new WebDriverWait(driver, 30);
+		
+		WebElement cruisesLink = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(LocatorValues.MercurySideLinkMenu_CruisesLink));	
+		
+		cruisesLink.click();
+		
+		return new MercuryCruiseSpecialsPage(driver);
+		
+	}
 }

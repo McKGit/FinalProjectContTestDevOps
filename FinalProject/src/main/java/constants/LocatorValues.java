@@ -2,6 +2,7 @@ package constants;
 
 import org.openqa.selenium.By;
 
+
 public class LocatorValues {
 	//BEGIN MERCURY WEBSITE LOCATORS
 	
@@ -130,7 +131,10 @@ public class LocatorValues {
 	
 	public static By MercuryCarRentalsPage_CarRentalsMast = By.cssSelector("img[src='/images/masts/mast_carRentals.gif']");
 
-	//Mercury Cruise Finder Page
+	//Mercury Cruise Specials Page
 	
+	public static By MercuryCruisesPage_CruiseSpecialsMast = By.cssSelector("img[src='/images/masts/cruise_special.gif']");
+	
+	public static By MercuryCruisesPage_nowAcceptingReservations = By.cssSelector("img[src='/images/reservation_open.gif']");
 }
 
